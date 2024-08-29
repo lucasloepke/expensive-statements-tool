@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Testsite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="content">
+        {% if person %}
+        <h1>Welcome, {{ person }}</h1>
+        <p>Upload <b>Actions</b> and <b>Statements</b> to summarize</p>
+        <form action="/download" method="post" enctype="multipart/form-data">
+            <input class="btn customButton large" type="file" name="file1" accept=".csv" title="Actions" required>
+            <input class="btn customButton large" type="file" name="file2" accept=".csv" title="Statements" required>
+            <input class="btn customButton large" type="submit" value="Upload">
+        </form>
+        
+        {% else %}
+        <h1>Authenticate to Continue</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

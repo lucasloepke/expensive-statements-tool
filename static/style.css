@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    font-family: "72";
+}
+
+html, body {
+    height: 100%;
+    margin: 10;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    background-image: url('fullsize.jpg');
+    background-position-y: 25%;
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+    padding: 80px;
+}
+
+.customButton { 
+    border:10px ridge #89D1FF;
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+    background-color:transparent;
+    color:#000000;
+    font-weight:bold;
+} 
+.customButton:hover {
+    cursor:pointer;
+    background-color:#C2FCEE;
+    color:#000000;
+}

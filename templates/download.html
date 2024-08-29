@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Testsite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="content">
+        {% if updone %}
+        <h1>Download Summary</h1>
+        <div>
+            <a href="{{ url_for('static', filename='sample.txt') }}"
+                    download="sample.txt" class="customButton">Download</a>
+        </div>
+        <p>file 1: {{ f1 }}</p>
+        <p>file 2: {{ f2 }}</p>
+
+        {% else %}
+        <h1>Authenticate to Continue</h1>
+        {% endif %}
+
+        {% if output %}
+        <h1>{{ out }}</h1>
+        {% endif %}
+    </div>
+</body>
+</html>
